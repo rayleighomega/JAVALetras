@@ -1,0 +1,2 @@
+# JAVALetras
+Exercici Lletres Repetides
