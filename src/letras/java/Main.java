@@ -1,14 +1,21 @@
 package letras.java;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args)
     {
-        char[] letras = {'A','L','V','A','R','O'};
+        //char[] letras = {'A','L','V','A','R','O'};
+
+        List<Character> letras = new ArrayList<Character>();
+
+        letras.add('A');
+        letras.add('L');
+        letras.add('V');
+        letras.add('A');
+        letras.add('R');
+        letras.add('O');
 
 
         //Input check
@@ -42,13 +49,13 @@ public class Main {
         Map<Character, Integer> map = new HashMap<>();
 
         //Count the repetition for each character
-        for (int i = 0; i < letras.length; i++)
+        for (char c : letras)
         {
             int charCounter = 0;
-            Character charToCompare = letras[i];
+            Character charToCompare = c;
 
-            for (int j = 0; j < letras.length; j++)
-                if(charToCompare.equals(letras[j]))
+            for (char c2 : letras)
+                if(charToCompare.equals(c2))
                 {
                     charCounter++;
                 }
